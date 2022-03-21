@@ -7,7 +7,6 @@
 
 /*selector elemento*/
 body{
-    background-image: url(img/logo.png);
     background-color: #D2F1EB;
     list-style: none;
 }
@@ -37,9 +36,9 @@ body .card{
 
 .card{
   position: relative;
-  width: 290px;
+  width: 275px;
   height: 400px;
-  margin: 20px;
+  margin: 20px 30px;
   float: left;
 }
 
@@ -131,10 +130,15 @@ body .card{
 }
 
 /*MENU HORIZONTAL*/
+.menu-horizontal{
+  width: 100%;
+  height: 58px;
+  background: #8c9196;
+}
 
 .menu-horizontal > li > a{
   display: block;
-  padding: 20px 35px;
+  padding: 20px 50px;
   color: white;
   text-decoration: none;
 }
@@ -148,6 +152,7 @@ body .card{
   list-style: none;
   width: 200px;
   background-color: #D2F1EB;
+  text-align: center;
 }
 .menu-horizontal li:hover .menu-vertical{
   display: block;
@@ -158,7 +163,7 @@ body .card{
 .menu-vertical li a{
   display: block;
   color: white;
-  padding: 15px 15px 15px 20px;
+  padding: 15px 40px 15px 20px;
 }
 
 /*selector clase*/
@@ -166,10 +171,7 @@ body .card{
     color:#8b008b;
 }
 
-/*menú*/
-#menu{
-    background-color:#D2F1EB 
-}
+
 
 ul {
     list-style-type: none;
@@ -190,15 +192,9 @@ ul {
     padding: 10px 10px;
     text-decoration: none;
   }
-
-  .header{
-    width: 100%;
-    height: 58px;
-    background: #8c9196;
-  }
   
   li a:hover {
-    background-color: #111;
+    background-color: #000000;
   }
 
   
