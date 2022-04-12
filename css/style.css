@@ -60,7 +60,7 @@ body .card{
 }
 
 .card .front img{
-  position:center;
+  text-align:center;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -170,7 +170,7 @@ body .card{
 
 .RedesSociales{
   display: block;
-  position: center;
+  text-align: center;
   font-size: 100px;
   padding: 100%;
 }
@@ -249,11 +249,11 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-  }
+}
   
   li {
     float: left;
-  }
+}
   
   li a {
     background: #8c9196;
@@ -262,13 +262,11 @@ ul {
     text-align: center;
     padding: 10px 10px;
     text-decoration: none;
-  }
+}
   
   li a:hover {
     background: #aaafae;
-  }
-
-
+}
 
   header { 
     width: 100%;
@@ -276,7 +274,7 @@ ul {
     color: #8c9196;
     text-align: center;
     font-size: 17.1px;
-  }
+}
 
 nav ul { 
   list-style: none;
@@ -302,12 +300,11 @@ nav ul li {
 .titulo{
   text-align: center;
   font-size: 30px;
-  font-family:sans-serif ;}
+}
 
 .parrafo{
   text-align:center;
   font-size: 200px;
-  font-style: sans-serif;
   font-weight: bold;
 }
 
