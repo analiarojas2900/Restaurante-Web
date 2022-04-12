@@ -249,11 +249,11 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-  }
+}
   
   li {
     float: left;
-  }
+}
   
   li a {
     background: #8c9196;
@@ -262,13 +262,11 @@ ul {
     text-align: center;
     padding: 10px 10px;
     text-decoration: none;
-  }
+}
   
   li a:hover {
     background: #aaafae;
-  }
-
-
+}
 
   header { 
     width: 100%;
@@ -276,7 +274,7 @@ ul {
     color: #8c9196;
     text-align: center;
     font-size: 17.1px;
-  }
+}
 
 nav ul { 
   list-style: none;
@@ -302,7 +300,7 @@ nav ul li {
 .titulo{
   text-align: center;
   font-size: 30px;
-  font-family:sans-serif ;}
+}
 
 .parrafo{
   text-align:center;
