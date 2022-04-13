@@ -29,11 +29,15 @@ p{
 
 footer{
   background: #8c9196;
-  position: absolute;
-  width: 100%;
   text-align:center;
+  width: 100%;
   font-family: 'Lobster', cursive;
+  float: left;
+  margin-top: 80px;
+
 }
+
+
 
 
 
