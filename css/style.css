@@ -9,6 +9,7 @@
 body{
     background-color: #D2F1EB;
     list-style: none;
+    text-decoration: none;
 }
 
 
@@ -28,16 +29,19 @@ p{
 }
 
 footer{
-  background: #8c9196;
+  background-color: #8c9196;
   text-align:center;
   width: 100%;
   font-family: 'Lobster', cursive;
-  float: left;
   margin-top: 80px;
-
+  text-decoration: none;
 }
 
 
+.container-fluid{
+  display: flex;
+  margin-top: 8px;
+}
 
 
 
@@ -289,6 +293,7 @@ ul {
     color: #8c9196;
     text-align: center;
     font-size: 17.1px;
+    text-decoration: none;
 }
 
 nav ul { 
