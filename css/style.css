@@ -28,7 +28,10 @@ p{
   font-size: 16px;
 }
 
-
+.buttonR{
+	background: #626466;
+	text-decoration: #f0f0f0;
+}
 
 .formulario{
   font-size: 20px;
