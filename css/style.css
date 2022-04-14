@@ -17,6 +17,29 @@ p{
   font-size: 16px;
 }
 
+.formulario{
+  font-size: 20px;
+}
+
+.logo{
+  height:500px;  
+  text-align: center;
+}
+
+footer{
+  background-color: #8c9196;
+  text-align:center;
+  width: 100%;
+  font-family: 'Lobster', cursive;
+  margin-top: 80px;
+  text-decoration: none;
+}
+
+
+.container-fluid{
+  display: flex;
+  margin-top: 8px;
+}
 
 /*TARJETA 1 DE UNO DE LOS MENU*/
 body .card{
