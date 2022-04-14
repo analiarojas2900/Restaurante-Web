@@ -11,11 +11,24 @@ body{
   list-style: none;
 }
 
+.inicioseccion{
+	margin-top: -30px;
+	height: 60px;
+	margin-right: -830px;
+}
+
+button{
+	margin: 4px;
+	height: 70%;
+	margin-top: -3px;
+}
 
 p{
   font-family: 'Volkhov', serif;
   font-size: 16px;
 }
+
+
 
 .formulario{
   font-size: 20px;
@@ -38,9 +51,12 @@ footer{
 
 
 .container-fluid{
-  display: flex;
-  margin-top: 8px;
+  margin-top: 10px;
+  height: 30px;
+  margin-right: -350px;
+  
 }
+
 
 /*TARJETA 1 DE UNO DE LOS MENU*/
 body .card{
@@ -191,26 +207,26 @@ padding: 100%;
 }
 
 input[type="text"], input[type="email"], textarea {
-background-color: #8c9196;
-border: 1px solid #8c9196;
-color: #000000;
-display: inline-block;
-padding: 10px;
-width: 100%;
-font-size: 1.2em;
-margin-bottom: 1%;
+	background-color: #8c9196;
+	border: 1px solid #8c9196;
+	color: #000000;
+	display:inline-flex;
+	padding: 10px;
+	width: 100%;
+	font-size: 1.2em;
+	margin-bottom: 1%;
 }
 input[name="name"] {
-background-color: #8c9196;
-width: 100%;
+	background-color: #8c9196;
+	width: 100%;
 }
 input[name="email"] {
-background-color: #8c9196;
-width: 60%;
+	background-color: #8c9196;
+	width: 60%;
 }
 input[name="phone"] {
-background-color: #8c9196;
-width: 36%;
+	background-color: #8c9196;
+	width: 60%;
 }
 
 
@@ -218,31 +234,34 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover
 {
-background: #f0f0f0;
-color: #333;
+	background: #f0f0f0;
+	color: #333;
 
 }
 
 input[type="button"], input[type="reset"], input[type="submit"] {
-background: #626466;
-border: medium none;
-color: #fff;
-outline: medium none;
-padding: 8px 0;
-transition: all 0.5s ease 0s;
-width: 18%;
-font-size: 1.4em;
-border-radius: 4px;  
-cursor: pointer;
+	background: #626466;
+	border: medium none;
+	color: #fff;
+	outline: medium none;
+	padding: 8px 0;
+	transition: all 0.5s ease 0s;
+	width: 100px;
+	font-size: 1.4em;
+	border-radius: 4px;  
+	cursor: pointer;
+	height: 50px;
 }
 
+
 textarea {
-display: block;
-min-height: 150px;
-resize: none;
-width: 100%;
-overflow: auto;
+	display: block;
+	min-height: 150px;
+	resize: none;
+	width: 100%;
+	overflow: auto;
 }
+
 input::placeholder,textarea::placeholder {
 color: #000000cc;
 font: italic 18px serif;
