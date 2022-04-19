@@ -33,7 +33,7 @@ p{
 	text-decoration: #f0f0f0;
 }
 
-.formulario{
+.formulario1{
   font-size: 20px;
 }
 
@@ -57,6 +57,12 @@ footer{
 	background-color: #c3c6c5;
 	margin-top: 40px;
 	padding: 50px;
+}
+
+.container1{
+	width: 100%;
+	margin-top: 60px;
+	padding: 200px 100px;
 }
 
 .container-fluid{
@@ -360,6 +366,8 @@ main {
 
 .formulario {
 	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
 }
 
 .formulario__label {
