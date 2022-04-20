@@ -65,6 +65,15 @@ footer{
 	padding: 200px 100px;
 }
 
+.container2{
+	width: 100%;
+	background-color: #D2F1EB;
+	margin-top: 40px;
+	padding: 50px;
+}
+
+
+
 .container-fluid{
   margin-top: 10px;
   height: 30px;
