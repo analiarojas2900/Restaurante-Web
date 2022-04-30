@@ -9,6 +9,7 @@
 body{
   background-color: #D2F1EB;
   list-style: none;
+  height: 100vh;
 }
 
 .inicioseccion{
@@ -18,7 +19,7 @@ body{
 }
 
 button{
-	margin: 4px;
+	margin: 6px;
 	height: 70%;
 	margin-top: -3px;
 }
@@ -69,6 +70,8 @@ footer{
 	margin-top: 40px;
 	padding: 50px;
 }
+
+
 
 
 
@@ -298,28 +301,33 @@ li {
   float: left;
 }
 
-li a {
-  background: #8c9196;
-  display: block;
-  color: #ffffff;
-  text-align: center;
-  padding: 10px 10px;
-  text-decoration: none;
-}
 
 li a:hover {
   background: #aaafae;
 }
 
+.container-fluid{
+	background-color: #aaafae;
+}
 
+
+.navbar{
+	padding-top: 0px;
+}
 
 .header { 
+	padding: 0%;
   width: 100%;
   padding: center;
-  color: #8c9196;
+  border-color: #aaafae;;
   text-align: center;
   font-size: 17.1px;
 }
+
+.dropdown-menu{
+	background-color: #aaafae;
+}
+
 
 nav ul { 
 list-style: none;
