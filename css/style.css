@@ -60,8 +60,7 @@ footer{
 }
 
 .container1{
-	width: 100%;
-	padding: 100px 50px;
+	padding: 120px 180px;
 }
 
 .container2{
@@ -73,12 +72,6 @@ footer{
 
 
 
-.container-fluid{
-  margin-top: 10px;
-  height: 30px;
-  margin-right: -350px;
-  
-}
 
 
 /*TARJETA 1 DE UNO DE LOS MENU*/
