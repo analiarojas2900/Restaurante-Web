@@ -9,6 +9,7 @@
 body{
   background-color: #D2F1EB;
   list-style: none;
+  height: 100vh;
 }
 
 .inicioseccion{
@@ -18,7 +19,7 @@ body{
 }
 
 button{
-	margin: 4px;
+	margin: 6px;
 	height: 70%;
 	margin-top: -3px;
 }
@@ -50,35 +51,38 @@ footer{
   margin-top: 80px;
   text-decoration: none;
   float: right;
+  margin-top: 10px;
+  padding: 20px;
 }
 
 .container{
+	background-color: #c3c6c5;
+	max-width: 900px;
+	width: 90%;
+	margin: auto;
+	padding: 30px;
+	position: center;
+}
+
+panel-heading{
+	position: center;
+}
+
+.container1{
+	padding: 10px 100px;
+}
+
+.container2{
 	width: 100%;
 	background-color: #c3c6c5;
 	margin-top: 40px;
 	padding: 50px;
 }
 
-.container1{
-	width: 100%;
-	padding: 100px 50px;
-}
-
-.container2{
-	width: 100%;
-	background-color: #D2F1EB;
-	margin-top: 40px;
-	padding: 50px;
-}
 
 
 
-.container-fluid{
-  margin-top: 10px;
-  height: 30px;
-  margin-right: -350px;
-  
-}
+
 
 
 /*TARJETA 1 DE UNO DE LOS MENU*/
@@ -96,6 +100,7 @@ height: 500px;
 margin: 20px 40px;
 float: left;
 text-align: center;
+background-color: #D2F1EB;
 }
 
 .card .face{
@@ -179,51 +184,6 @@ transform: perspective(600px) rotateY(360deg);
 /*AQUI TERMINA LA PRIMERA TARJETA*/
 
 
-.menunormal{
-color: #000;
-font-size: 30px;
-text-align: center;
-font-family: 'Lobster', cursive;
-
-}
-
-/*MENU HORIZONTAL*/
-.menu-horizontal{
-width: 100%;
-height: 58px;
-background: #8c9196;
-font-size: 10%;
-}
-
-.menu-horizontal > li > a{
-display: block;
-padding: 25px 50px;
-font-size: 10px;
-color: white;
-text-decoration: none;
-}
-
-/*MENU VERTICAL*/
-.menu-vertical{
-position: absolute;
-display: none;
-list-style: none;
-width: 130px;
-background-color: #8c9196;
-text-align: left;
-font-size: 18px;
-}
-.menu-horizontal li:hover .menu-vertical{
-display: block;
-}
-.menu-vertical li:hover{
-background-color: #D2F1EB;
-}
-.menu-vertical li a{
-display: block;
-color: white;
-padding: 15px 20px 15px 20px;
-}
 
 .RedesSociales{
 display: block;
@@ -305,28 +265,33 @@ li {
   float: left;
 }
 
-li a {
-  background: #8c9196;
-  display: block;
-  color: #ffffff;
-  text-align: center;
-  padding: 10px 10px;
-  text-decoration: none;
-}
 
 li a:hover {
   background: #aaafae;
 }
 
+.container-fluid{
+	background-color: #aaafae;
+}
 
+
+.navbar{
+	padding-top: 0px;
+}
 
 .header { 
+	padding: 0%;
   width: 100%;
   padding: center;
-  color: #8c9196;
+  border-color: #aaafae;;
   text-align: center;
   font-size: 17.1px;
 }
+
+.dropdown-menu{
+	background-color: #aaafae;
+}
+
 
 nav ul { 
 list-style: none;
@@ -366,10 +331,10 @@ font-size: 20px;
 }
 
 main {
-	max-width: 800px;
+	max-width: 900px;
 	width: 90%;
 	margin: auto;
-	padding: 40px;
+	padding: 30px;
 }
 
 .formulario {
