@@ -57,7 +57,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ProyectoDjango.wsgi.application'
+WSGI_APPLICATION = 'RESTAURANTE-WEB.wsgi.application'
 
 
 # Database
