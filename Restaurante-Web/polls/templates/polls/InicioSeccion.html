@@ -25,26 +25,26 @@
             <div class="collapse navbar-collapse" id="navbarScroll">
               <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html"">Inicio</a>
+                  <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Inicio</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Menus
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                    <li><a class="dropdown-item" href="MenuVegetariano.html">Menu vegetariano</a></li>
-                    <li><a class="dropdown-item" href="MenuNormal.html">Menu Normal</a></li>
+                    <li><a class="dropdown-item" href="{% url 'MenuVegetariano' %}">Menu vegetariano</a></li>
+                    <li><a class="dropdown-item" href="{% url 'MenuNormal' %}">Menu Normal</a></li>
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="Contacto.html">Contacto</a>
+                  <a class="nav-link" href="{% url 'Contacto' %}">Contacto</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="Reserva.html">Reserva</a>
                 </li>
               </ul>
               <nav class="inicioseccion">
-                <button class="btn btn-outline-success my-2 my-sm-0"><a href="Registrar.html"><img src="img/icons8-usuario-64.png" alt=""></a></button>
+                <button class="btn btn-outline-success my-2 my-sm-0"><a href="{% url 'Registrar' %}"><img src="{% static 'polls/img/icons8-usuario-64.png' %}" alt=""></a></button>
             </nav>
             </div>
           </div>
@@ -92,10 +92,10 @@
               <br>
           <h4>Redes Sociales</h4>
           <br>
-          <button class="btn btn-outline-success my-2 my-sm-0"><a href="https://www.instagram.com/"><img src="img/icons8-instagram-48.png" alt=""></a></button>
-          <button class="btn btn-outline-success my-2 my-sm-0"><a href="https://www.facebook.com/"><img src="img/icons8-facebook-48.png" alt=""></a></button>
-          <button class="btn btn-outline-success my-2 my-sm-0"><a href="https://www.twitter.com/"><img src="img/icons8-twitter-48.png" alt=""></a></button>
-          <button class="btn btn-outline-success my-2 my-sm-0"><a href="https://www.google.com/maps/place/Fosa+de+las+Marianas/@11.3493333,142.190811,15z/data=!4m13!1m7!3m6!1s0x67328f3cd57de715:0x1bbe64e7a21aa7fc!2sFosa+de+las+Marianas!3b1!8m2!3d11.3493126!4d142.1995658!3m4!1s0x67328f3cd57de715:0x1bbe64e7a21aa7fc!8m2!3d11.3493126!4d142.1995658"><img src="img/icons8-google-maps-48.png" alt=""></a></button>
+          <button class="btn btn-outline-success my-2 my-sm-0"><a href="https://www.instagram.com/"><img src="{% static 'polls/img/icons8-instagram-48.png' %}" alt=""></a></button>
+          <button class="btn btn-outline-success my-2 my-sm-0"><a href="https://www.facebook.com/"><img src="{% static 'polls/img/icons8-facebook-48.png' %}" alt=""></a></button>
+          <button class="btn btn-outline-success my-2 my-sm-0"><a href="https://www.twitter.com/"><img src="{% static 'polls/img/icons8-twitter-48.png' %}" alt=""></a></button>
+          <button class="btn btn-outline-success my-2 my-sm-0"><a href="https://www.google.com/maps/place/Fosa+de+las+Marianas/@11.3493333,142.190811,15z/data=!4m13!1m7!3m6!1s0x67328f3cd57de715:0x1bbe64e7a21aa7fc!2sFosa+de+las+Marianas!3b1!8m2!3d11.3493126!4d142.1995658!3m4!1s0x67328f3cd57de715:0x1bbe64e7a21aa7fc!8m2!3d11.3493126!4d142.1995658"><img src="{% static 'polls/img/icons8-google-maps-48.png' %}" alt=""></a></button>
           </nav>
       </footer>
     </section>
