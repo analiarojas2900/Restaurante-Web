@@ -40,7 +40,7 @@
                   <a class="nav-link" href="{% url 'Contacto' %}">Contacto</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="Reserva.html">Reserva</a>
+                  <a class="nav-link" href="{% url 'Reserva' %}">Reserva</a>
                 </li>
               </ul>
               <nav class="inicioseccion">
@@ -78,7 +78,7 @@
                         <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Inicio de seccion exitosamente!</p>
                     </div>
                 </form>
-                <a href="Registrar.html"><button class="formulario__btn">Registrarse</button></a>
+                <a href="{% url 'Registrar' %}"><button class="formulario__btn">Registrarse</button></a>
                 </div>
             </main>	
             <script src="js/formulario.js"></script>
