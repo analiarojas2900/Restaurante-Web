@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import Comida
+from .forms import ComidaForm
 
 # Create your views here.
 def index(request):
@@ -21,3 +23,30 @@ def Registrar(request):
 
 def Reserva(request):
     return render(request, 'polls/Reserva.html')
+
+def Form_Comida(request):
+    return render(request, 'polls/Form_Comida.html')
+
+def home(request):
+    listaComida =  Comida.objects.all() #select * from Comida
+    datos = {'comida':listaComida}
+    return render(request,"polls/index.html", datos)
+
+def agregar_comida(request):
+    datos = {
+        'form': ComidaForm()
+    }
+
+    if request.method == 'POST':
+        formulario = ComidaForm(request.POST)
+
+        if formulario.is_valid():
+            formulario.save() #insert a la BD
+            datos['mensaje'] = 'Se guardó el plato'
+        else:
+            datos['mensaje'] = 'NO se guardó el plato'
+ 
+    return render(request,"productos/Form_Comida.html", datos)
+
+
+
