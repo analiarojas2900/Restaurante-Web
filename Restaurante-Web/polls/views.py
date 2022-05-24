@@ -1,3 +1,4 @@
+from django import forms
 from django.shortcuts import render
 from .models import Comida
 from .forms import ComidaForm
@@ -25,7 +26,8 @@ def Reserva(request):
     return render(request, 'polls/Reserva.html')
 
 def Form_Comida(request):
-    return render(request, 'polls/Form_Comida.html')
+    form=ComidaForm()
+    return render(request, 'polls/Form_Comida.html',{'form':form})
 
 def home(request):
     listaComida =  Comida.objects.all() #select * from Comida
@@ -47,6 +49,3 @@ def agregar_comida(request):
             datos['mensaje'] = 'NO se guardó el plato'
  
     return render(request,"polls/Form_Comida.html", datos)
-
-
-
