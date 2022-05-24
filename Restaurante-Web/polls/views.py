@@ -1,5 +1,5 @@
 from django import forms
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Comida
 from .forms import ComidaForm
 
@@ -49,3 +49,26 @@ def agregar_comida(request):
             datos['mensaje'] = 'NO se guardó el plato'
  
     return render(request,"polls/Form_Comida.html", datos)
+
+def Modificar_Comida(request, id):
+    Comida = Comida.objects.get(precio = id)
+
+    datos = {
+        'form': ComidaForm(instance = Comida)
+    }
+
+    if request.method == 'POST':
+        formulario = ComidaForm(data = request.POST, instance = Comida)
+
+        if formulario.is_valid():
+            formulario.save() #modificar a la BD
+            datos['mensaje'] = 'Se modificó el plato'
+        else:
+            datos['mensaje'] = 'NO se modificó el plato'
+
+    return render(request,"polls/Modificar_Comida.html", datos)
+
+def Eliminar_Comida(request, id):
+    vehiculo = Comida.objects.get(precio = id)
+    vehiculo.delete() #delete de la BD
+    return redirect(to='home')
