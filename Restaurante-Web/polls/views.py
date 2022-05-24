@@ -46,7 +46,7 @@ def agregar_comida(request):
         else:
             datos['mensaje'] = 'NO se guardó el plato'
  
-    return render(request,"productos/Form_Comida.html", datos)
+    return render(request,"polls/Form_Comida.html", datos)
 
 
 
