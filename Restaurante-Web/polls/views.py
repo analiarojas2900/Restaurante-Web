@@ -37,9 +37,9 @@ def Platos(request):
     #form=ComidaForm()
     #return render(request, 'polls/Modificar_Comida.html',{'form':form})
 
-def home(request):
-    listaComidas =  Comida.objects.all() #select * from Comida
-    datos = {'comidas':listaComidas}
+def Platos(request):
+    listaComida =  Comida.objects.all() #select * from Comida
+    datos = {'comida':listaComida}
     return render(request,"polls/Platos.html", datos)
 
 def Form_Comida(request):

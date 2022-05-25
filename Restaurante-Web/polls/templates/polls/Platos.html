@@ -19,23 +19,21 @@
                 <th>Precio</th>
                 <th>Plato</th>
                 <th>Tipo</th>
-                <th>Categoria</th>
                 <th>Modificar</th>
                 <th>Eliminar</th>
             </tr>
 
 
-            {% for c in comidas%}
+            {% for c in comidaS%}
             <tr>
                 <td>{{c.precio}}</td>
                 <td>{{c.plato}}</td>
                 <td>{{c.tipo}}</td>
-                <td>{{c.categoria}}</td>
                 <td><a href="{% url 'Modificar_Comida' c.precio %}">Modificar</a></td>
                 <td><a href="{% url 'eliminar_Comida' c.precio %}">Eliminar</a></td>
             </tr>
             {% endfor %}
-        </table>
+</table>
 
         <hr>
         <a href="{% url 'Form_Comida'%}">Agregar Plato</a>
