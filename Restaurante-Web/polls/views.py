@@ -25,8 +25,6 @@ def Registrar(request):
 def Reserva(request):
     return render(request, 'polls/Reserva.html')
 
-def Platos(request):
-    return render(request, 'polls/Platos.html')
 
 #def Form_Comida(request):
     #form=ComidaForm()
