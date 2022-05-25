@@ -24,13 +24,13 @@
             </tr>
 
 
-            {% for c in comidaS%}
+            {% for c in comidas%}
             <tr>
                 <td>{{c.precio}}</td>
                 <td>{{c.plato}}</td>
                 <td>{{c.tipo}}</td>
                 <td><a href="{% url 'Modificar_Comida' c.precio %}">Modificar</a></td>
-                <td><a href="{% url 'eliminar_Comida' c.precio %}">Eliminar</a></td>
+                <td><a href="{% url 'Eliminar_Comida' c.precio %}">Eliminar</a></td>
             </tr>
             {% endfor %}
 </table>
