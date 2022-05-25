@@ -37,7 +37,9 @@ def Reserva(request):
 
 def Platos(request):
     listaComida =  Comida.objects.all() #select * from Comida
-    datos = {'comida':listaComida}
+    datos = {
+        'comida':listaComida
+    }
     return render(request,"polls/Platos.html", datos)
 
 def Form_Comida(request):
@@ -56,15 +58,15 @@ def Form_Comida(request):
  
     return render(request,"polls/Form_Comida.html", datos)
 
-def Modificar_Comida(request, id):
-    Comida = Comida.objects.get(precio = id)
+def Modificar_Comida(request, pre):
+    comida = Comida.objects.get(precio = pre)
 
     datos = {
-        'form': ComidaForm(instance = Comida)
+        'form': ComidaForm(instance = comida)
     }
 
     if request.method == 'POST':
-        formulario = ComidaForm(data = request.POST, instance = Comida)
+        formulario = ComidaForm(data = request.POST, instance = comida)
 
         if formulario.is_valid():
             formulario.save() #modificar a la BD
@@ -74,7 +76,7 @@ def Modificar_Comida(request, id):
 
     return render(request,"polls/Modificar_Comida.html", datos)
 
-def Eliminar_Comida(request, id):
-    Comida = Comida.objects.get(precio = id)
-    Comida.delete() #delete de la BD
-    return redirect(to='home')
+def Eliminar_Comida(request, pre):
+    comida = Comida.objects.get(precio = pre)
+    comida.delete() #delete de la BD
+    return redirect(to='Platos')
