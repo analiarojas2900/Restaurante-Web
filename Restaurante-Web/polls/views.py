@@ -25,16 +25,24 @@ def Registrar(request):
 def Reserva(request):
     return render(request, 'polls/Reserva.html')
 
-def Form_Comida(request):
-    form=ComidaForm()
-    return render(request, 'polls/Form_Comida.html',{'form':form})
+def Platos(request):
+    return render(request, 'polls/Platos.html')
+
+#def Form_Comida(request):
+    #form=ComidaForm()
+    #return render(request, 'polls/Form_Comida.html',{'form':form})
+
+
+#def Modificar_Comida(request):
+    #form=ComidaForm()
+    #return render(request, 'polls/Modificar_Comida.html',{'form':form})
 
 def home(request):
-    listaComida =  Comida.objects.all() #select * from Comida
-    datos = {'comida':listaComida}
-    return render(request,"polls/index.html", datos)
+    listaComidas =  Comida.objects.all() #select * from Comida
+    datos = {'comidas':listaComidas}
+    return render(request,"polls/Platos.html", datos)
 
-def agregar_comida(request):
+def Form_Comida(request):
     datos = {
         'form': ComidaForm()
     }
@@ -69,6 +77,6 @@ def Modificar_Comida(request, id):
     return render(request,"polls/Modificar_Comida.html", datos)
 
 def Eliminar_Comida(request, id):
-    vehiculo = Comida.objects.get(precio = id)
-    vehiculo.delete() #delete de la BD
+    Comida = Comida.objects.get(precio = id)
+    Comida.delete() #delete de la BD
     return redirect(to='home')

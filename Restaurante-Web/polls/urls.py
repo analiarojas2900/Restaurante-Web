@@ -7,6 +7,7 @@ from .views import MenuNormal
 from .views import MenuVegetariano
 from .views import Registrar
 from .views import Reserva
+from .views import Platos
 from .views import Form_Comida
 from .views import Modificar_Comida
 
@@ -19,6 +20,7 @@ urlpatterns = [
     path('MenuVegetariano', MenuVegetariano, name='MenuVegetariano'),
     path('Registrar', Registrar, name='Registrar'),
     path('Reserva', Reserva, name='Reserva'),
+    path('Platos', Platos, name='Platos'),
     path('Form_Comida', Form_Comida, name='Form_Comida'),
     path('Modificar_Comida', Modificar_Comida, name='Modificar_Comida'),
 ]
