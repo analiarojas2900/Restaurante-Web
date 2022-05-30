@@ -14,7 +14,7 @@ from .views import Eliminar_Comida
 
 
 urlpatterns = [
-    path('index', index, name='index'),
+    path('', index, name='index'),
     path('Contacto', Contacto, name='Contacto'),
     path('InicioSeccion', InicioSeccion, name='InicioSeccion'),
     path('MenuNormal', MenuNormal, name='MenuNormal'),
