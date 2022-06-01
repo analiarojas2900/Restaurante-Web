@@ -4,25 +4,25 @@ from .models import Comida
 from .forms import ComidaForm
 
 def index(request):
-    return render(request,'polls/index.html')
+    return render(request,'Polls/index.html')
 
 def Contacto(request):
-    return render(request, 'polls/Contacto.html')
+    return render(request, 'Polls/Contacto.html')
 
 def InicioSeccion(request):
-    return render(request, 'polls/InicioSeccion.html')
+    return render(request, 'Polls/InicioSeccion.html')
 
 def MenuNormal(request):
-    return render(request, 'polls/MenuNormal.html')
+    return render(request, 'Polls/MenuNormal.html')
 
 def MenuVegetariano(request):
-    return render(request, 'polls/MenuVegetariano.html')
+    return render(request, 'Polls/MenuVegetariano.html')
 
 def Registrar(request):
-    return render(request, 'polls/Registrar.html')
+    return render(request, 'Polls/Registrar.html')
 
 def Reserva(request):
-    return render(request, 'polls/Reserva.html')
+    return render(request, 'Polls/Reserva.html')
 
 
 #def Form_Comida(request):
@@ -39,7 +39,7 @@ def Platos(request):
     datos = {
         'comida':listaComida
     }
-    return render(request,"polls/Platos.html", datos)
+    return render(request,"Polls/Platos.html", datos)
 
 def Form_Comida(request):
     datos = {
@@ -55,7 +55,7 @@ def Form_Comida(request):
         else:
             datos['mensaje'] = 'NO se guardó el plato'
  
-    return render(request,"polls/Form_Comida.html", datos)
+    return render(request,"Polls/Form_Comida.html", datos)
 
 def Modificar_Comida(request, id):
     comida = Comida.objects.get(idPlato = id)
@@ -73,7 +73,7 @@ def Modificar_Comida(request, id):
         else:
             datos['mensaje'] = 'NO se modificó el plato'
 
-    return render(request,"polls/Modificar_Comida.html", datos)
+    return render(request,"Polls/Modificar_Comida.html", datos)
 
 def Eliminar_Comida(request, id):
     comida = Comida.objects.get(idPlato = id)
