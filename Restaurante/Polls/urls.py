@@ -23,6 +23,6 @@ urlpatterns = [
     path('Reserva', Reserva, name='Reserva'),
     path('Platos', Platos, name='Platos'),
     path('Form_Comida', Form_Comida, name='Form_Comida'),
-    path('Modificar_Comida/<pre>', Modificar_Comida, name='Modificar_Comida'),
-    path('Eliminar_Comida/<pre>', Eliminar_Comida, name='Eliminar_Comida'),
+    path('Modificar_Comida/<id>', Modificar_Comida, name='Modificar_Comida'),
+    path('Eliminar_Comida/<id>', Eliminar_Comida, name='Eliminar_Comida'),
 ]

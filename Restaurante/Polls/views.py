@@ -3,27 +3,26 @@ from django.shortcuts import render,redirect
 from .models import Comida
 from .forms import ComidaForm
 
-# Create your views here.
 def index(request):
-    return render(request,'Polls/index.html')
+    return render(request,'polls/index.html')
 
 def Contacto(request):
-    return render(request, 'Polls/Contacto.html')
+    return render(request, 'polls/Contacto.html')
 
 def InicioSeccion(request):
-    return render(request, 'Polls/InicioSeccion.html')
+    return render(request, 'polls/InicioSeccion.html')
 
 def MenuNormal(request):
-    return render(request, 'Polls/MenuNormal.html')
+    return render(request, 'polls/MenuNormal.html')
 
 def MenuVegetariano(request):
-    return render(request, 'Polls/MenuVegetariano.html')
+    return render(request, 'polls/MenuVegetariano.html')
 
 def Registrar(request):
-    return render(request, 'Polls/Registrar.html')
+    return render(request, 'polls/Registrar.html')
 
 def Reserva(request):
-    return render(request, 'Polls/Reserva.html')
+    return render(request, 'polls/Reserva.html')
 
 
 #def Form_Comida(request):
@@ -40,7 +39,7 @@ def Platos(request):
     datos = {
         'comida':listaComida
     }
-    return render(request,"Polls/Platos.html", datos)
+    return render(request,"polls/Platos.html", datos)
 
 def Form_Comida(request):
     datos = {
@@ -56,10 +55,10 @@ def Form_Comida(request):
         else:
             datos['mensaje'] = 'NO se guardó el plato'
  
-    return render(request,"Polls/Form_Comida.html", datos)
+    return render(request,"polls/Form_Comida.html", datos)
 
-def Modificar_Comida(request, pre):
-    comida = Comida.objects.get(precio = pre)
+def Modificar_Comida(request, id):
+    comida = Comida.objects.get(idPlato = id)
 
     datos = {
         'form': ComidaForm(instance = comida)
@@ -74,9 +73,9 @@ def Modificar_Comida(request, pre):
         else:
             datos['mensaje'] = 'NO se modificó el plato'
 
-    return render(request,"Polls/Modificar_Comida.html", datos)
+    return render(request,"polls/Modificar_Comida.html", datos)
 
-def Eliminar_Comida(request, pre):
-    comida = Comida.objects.get(precio = pre)
+def Eliminar_Comida(request, id):
+    comida = Comida.objects.get(idPlato = id)
     comida.delete() #delete de la BD
     return redirect(to='Platos')
