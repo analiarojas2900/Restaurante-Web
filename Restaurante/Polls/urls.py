@@ -1,5 +1,5 @@
 from unicodedata import name
-from django.urls import path,include
+from django.urls import path
 from .views import index
 from .views import Contacto
 from .views import InicioSeccion
