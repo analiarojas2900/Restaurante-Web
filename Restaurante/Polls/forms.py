@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Comida #, Categoria
+from Polls.models import Comida #, Categoria
 
 class ComidaForm(ModelForm):
     class Meta:

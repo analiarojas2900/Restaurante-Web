@@ -1,7 +1,7 @@
 from django import forms
 from django.shortcuts import render,redirect
-from .models import Comida
-from .forms import ComidaForm
+from Polls.models import Comida
+from Polls.forms import ComidaForm
 
 def index(request):
     return render(request,'Polls/index.html')

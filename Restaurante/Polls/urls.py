@@ -1,16 +1,16 @@
 from unicodedata import name
 from django.urls import path
-from .views import index
-from .views import Contacto
-from .views import InicioSeccion
-from .views import MenuNormal
-from .views import MenuVegetariano
-from .views import Registrar
-from .views import Reserva
-from .views import Platos
-from .views import Form_Comida
-from .views import Modificar_Comida
-from .views import Eliminar_Comida
+from Polls.views import index
+from Polls.views import Contacto
+from Polls.views import InicioSeccion
+from Polls.views import MenuNormal
+from Polls.views import MenuVegetariano
+from Polls.views import Registrar
+from Polls.views import Reserva
+from Polls.views import Platos
+from Polls.views import Form_Comida
+from Polls.views import Modificar_Comida
+from Polls.views import Eliminar_Comida
 
 
 urlpatterns = [
