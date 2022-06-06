@@ -1,14 +1,17 @@
 from django.shortcuts import render
 from rest_framework import status
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view,permission_classes
 from rest_framework.response import Response
 from rest_framework.parsers import JSONParser
 from django.views.decorators.csrf import csrf_exempt
 from Polls.models import Comida
 from rest_comida.serializers import ComidaSerializer
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
 
 @csrf_exempt
 @api_view(['GET','POST'])
+@permission_classes((IsAuthenticated,))
 def lista_comida(request):
     if request.method == 'GET':
         listaComida =  Comida.objects.all()
@@ -24,6 +27,7 @@ def lista_comida(request):
             return Response(serializer.errors, status = status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET','PUT','DELETE'])
+@permission_classes((IsAuthenticated,))
 def detalle_comida(request, id):
     try:
         comida = Comida.objects.get(patente=id)

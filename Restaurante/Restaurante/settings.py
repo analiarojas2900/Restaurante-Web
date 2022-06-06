@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'Restaurante',
-    'rest_comida',  
+    'rest_comida', 
+    'rest_framework.authtoken', 
     
 ]
 
@@ -72,8 +73,14 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Restaurante.wsgi.application'
+REST_FRAMEWORK={
+    'DEFAULT_AUTHENTICATION_CLASSES':[
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+}
 
+
+WSGI_APPLICATION = 'Restaurante.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
