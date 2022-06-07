@@ -12,7 +12,14 @@ body{
   height: 100vh;
 }
 
-
+.container3{
+	background-color: #c3c6c5;
+	width: 100%;
+	padding: 60px;
+	filter:alpha(opacity=70);
+	-moz-opacity:.80;opacity:.80;
+	border-radius: 30%;
+}
 
 
 #table1 th{
@@ -77,8 +84,9 @@ footer{
 	max-width: 900px;
 	width: 90%;
 	margin: auto;
-	padding: 30px;
+	padding: 50px;
 	position: center;
+	border-radius: 10%;
 }
 
 panel-heading{
