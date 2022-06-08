@@ -1,7 +1,9 @@
+from pipes import Template
 from django import forms
 from django.shortcuts import render,redirect
 from Polls.models import Comida
 from Polls.forms import ComidaForm
+from django.views.generic import TemplateView
 
 def index(request):
     return render(request,'Polls/index.html')
@@ -9,8 +11,8 @@ def index(request):
 def Contacto(request):
     return render(request, 'Polls/Contacto.html')
 
-def InicioSeccion(request):
-    return render(request, 'Polls/InicioSeccion.html')
+class LoginGoogle(TemplateView):
+    template_name = "Polls/InicioSeccion.html"
 
 def MenuNormal(request):
     return render(request, 'Polls/MenuNormal.html')
