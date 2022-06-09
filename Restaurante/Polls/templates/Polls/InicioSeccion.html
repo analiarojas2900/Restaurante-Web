@@ -77,10 +77,10 @@
                     <div class="formulario__grupo formulario__grupo-btn-enviar">
                         <button type="submit" class="formulario__btn">Iniciar Seccion</button>
                         <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Inicio de seccion exitosamente!</p>
+                        <button class="formulario__btn">Registrarse</button><a href="{% url 'Registrar' %}"></a>
                     </div>
                 </form>
-                <a href="{% url 'Registrar' %}"><button class="formulario__btn">Registrarse</button></a>
-                <button onclick="loginGoogle()"><img src="{% static 'polls/img/icons8-logo-de-google-48.png' %}" alt=""></button>
+                <button class="google" onclick="loginGoogle()">Ingresar con <img src="{% static 'polls/img/icons8-logo-de-google-48.png' %}" alt=""></button>
                 </div>
             </main>	
             <script src="js/formulario.js"></script>

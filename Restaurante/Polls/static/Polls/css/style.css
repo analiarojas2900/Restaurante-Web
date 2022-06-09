@@ -32,7 +32,12 @@ body{
 
 
 
-
+.google{
+	margin-top: 10px;
+	height: 60px;
+	margin-right: 10px;
+	border-radius: 30%;
+}
 
 
 

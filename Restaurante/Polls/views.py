@@ -14,6 +14,7 @@ def Contacto(request):
 class LoginGoogle(TemplateView):
     template_name = "Polls/InicioSeccion.html"
 
+
 def MenuNormal(request):
     return render(request, 'Polls/MenuNormal.html')
 
