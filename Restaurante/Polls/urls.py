@@ -1,5 +1,5 @@
 from unicodedata import name
-from django.urls import path
+from django.urls import path,include
 from . import views
 from Polls.views import index
 from Polls.views import Contacto
@@ -12,7 +12,8 @@ from Polls.views import Form_Comida
 from Polls.views import Modificar_Comida
 from Polls.views import Eliminar_Comida
 from Polls.views import InicioSeccion
-
+from django.views.generic import TemplateView
+from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
     path('', index, name='index'),
@@ -26,4 +27,7 @@ urlpatterns = [
     path('Modificar_Comida/<id>', Modificar_Comida, name='Modificar_Comida'),
     path('Eliminar_Comida/<id>', Eliminar_Comida, name='Eliminar_Comida'),
     path('InicioSeccion', InicioSeccion, name='InicioSeccion'),
+    path('accounts/', include('allauth.urls')),
+    path('', TemplateView.as_view(template_name="InicioSeccion")),
+    path('logout', LogoutView.as_view()),
 ]
