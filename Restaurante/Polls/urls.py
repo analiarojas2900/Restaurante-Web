@@ -11,6 +11,7 @@ from Polls.views import Platos
 from Polls.views import Form_Comida
 from Polls.views import Modificar_Comida
 from Polls.views import Eliminar_Comida
+from Polls.views import InicioSeccion
 
 
 urlpatterns = [
@@ -24,5 +25,5 @@ urlpatterns = [
     path('Form_Comida', Form_Comida, name='Form_Comida'),
     path('Modificar_Comida/<id>', Modificar_Comida, name='Modificar_Comida'),
     path('Eliminar_Comida/<id>', Eliminar_Comida, name='Eliminar_Comida'),
-    path('InicioSeccion', views.LoginGoogle.as_view(), name= 'InicioSeccion'),
+    path('InicioSeccion', InicioSeccion, name='InicioSeccion'),
 ]

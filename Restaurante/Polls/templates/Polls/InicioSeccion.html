@@ -80,7 +80,6 @@
                         <button class="formulario__btn">Registrarse</button><a href="{% url 'Registrar' %}"></a>
                     </div>
                 </form>
-                <button class="google" onclick="loginGoogle()">Ingresar con <img src="{% static 'polls/img/icons8-logo-de-google-48.png' %}" alt=""></button>
                 </div>
             </main>	
             <script src="js/formulario.js"></script>
@@ -103,46 +102,7 @@
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>     
     <script src="https://www.gstatic.com/firebasejs/9.8.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.8.2/firebase-firestore-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.8.2/firebase-auth-compat.js"></script>
-<script>
-  const firebaseApp = firebase.initializeApp({
-    apiKey: "AIzaSyDrebxceQE7aIW8l_ttXnTcmZOQY_SH6kw",
-  authDomain: "restaurante-352618.firebaseapp.com",
-  projectId: "restaurante-352618",
-  storageBucket: "restaurante-352618.appspot.com",
-  messagingSenderId: "522222057824",
-  appId: "1:522222057824:web:def8af5a314e489e4b0605",
-  measurementId: "G-2MG7MHVRQR"
-  });
-  const db = firebaseApp.firestore();
-  const auth = firebaseApp.auth();
-
-  function loginGoogle(){
-    var provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth()
-  .signInWithPopup(provider)
-  .then((result) => {
-    /** @type {firebase.auth.OAuthCredential} */
-    var credential = result.credential;
-
-    // This gives you a Google Access Token. You can use it to access the Google API.
-    var token = credential.accessToken;
-    // The signed-in user info.
-    var user = result.user;
-    // ...
-  }).catch((error) => {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // The email of the user's account used.
-    var email = error.email;
-    // The firebase.auth.AuthCredential type that was used.
-    var credential = error.credential;
-    // ...
-  });
-
-  }
-</script>
+  <script src="https://www.gstatic.com/firebasejs/9.8.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.8.2/firebase-auth-compat.js"></script>
 </body>
 </html>
