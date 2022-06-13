@@ -126,7 +126,7 @@
                   {% if user.is_authenticated %}
                   <p>Welcome, You are logged in as {{ user.username }}</p>
                     {% else %}
-                  <button class="google"><a href="{% provider_login_url 'google' %}">Iniciar seccion con  <img src="{% static 'polls/img/icons8-logo-de-google-48.png' %}" alt=""></a></button>
+                  <button class="google"><a href="{% provider_login_url 'google' %}">Iniciar seccion con<img src="{% static 'polls/img/icons8-logo-de-google-48.png' %}" alt=""></a></button>
                     {% endif %}
                 </div>    
                 </main>	

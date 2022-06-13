@@ -1,4 +1,5 @@
 {% load static %}
+{% load socialaccount %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -80,6 +81,11 @@
                         <button class="formulario__btn">Registrarse</button><a href="{% url 'Registrar' %}"></a>
                     </div>
                 </form>
+                {% if user.is_authenticated %}
+                  <p>Welcome, You are logged in as {{ user.username }}</p>
+                    {% else %}
+                    <button class="google"><a href="{% provider_login_url 'google' %}">Iniciar seccion con<img src="{% static 'polls/img/icons8-logo-de-google-48.png' %}" alt=""></a></button>
+                    {% endif %}
                 </div>
             </main>	
             <script src="js/formulario.js"></script>

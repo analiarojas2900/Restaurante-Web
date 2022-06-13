@@ -12,6 +12,10 @@ body{
   height: 100vh;
 }
 
+a{
+	list-style: none;
+}
+
 .container3{
 	background-color: #c3c6c5;
 	width: 100%;
@@ -37,6 +41,7 @@ body{
 	height: 60px;
 	margin-right: 10px;
 	border-radius: 30%;
+	list-style: none;
 }
 
 
