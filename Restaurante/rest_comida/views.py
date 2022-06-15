@@ -30,7 +30,7 @@ def lista_comida(request):
 @permission_classes((IsAuthenticated,))
 def detalle_comida(request, id):
     try:
-        comida = Comida.objects.get(patente=id)
+        comida = Comida.objects.get(idPlato=id)
     except Comida.DoesNotExist:
         return Response(status = status.HTTP_404_NOT_FOUND)
 
