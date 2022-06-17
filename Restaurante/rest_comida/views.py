@@ -12,6 +12,22 @@ from rest_framework.permissions import IsAuthenticated
 @csrf_exempt
 @api_view(['GET','POST'])
 @permission_classes((IsAuthenticated,))
+def lista_comida(request):
+    if request.method == 'GET':
+        listaComida =  Comida.objects.all()
+        serializer = ComidaSerializer(listaComida, many = True)
+        return Response(serializer.data)
+    elif request.method == 'POST':
+        dataP = JSONParser().parse(request)
+        serializer = ComidaSerializer(data=dataP)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status = status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status = status.HTTP_400_BAD_REQUEST)
+        
+@api_view(['GET','PUT','DELETE'])
+@permission_classes((IsAuthenticated,))       
 def detalle_comida(request, id):
     try:
         comida = Comida.objects.get(idPlato=id)
