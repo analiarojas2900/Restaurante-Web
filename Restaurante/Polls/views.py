@@ -48,7 +48,7 @@ def Form_Comida(request):
     }
 
     if request.method == 'POST':
-        formulario = ComidaForm(request.POST)
+        formulario = ComidaForm(request.POST or None, request.FILES or None)
 
         if formulario.is_valid():
             formulario.save() #insert a la BD
@@ -66,7 +66,7 @@ def Modificar_Comida(request, id):
     }
 
     if request.method == 'POST':
-        formulario = ComidaForm(data = request.POST, instance = comida)
+        formulario = ComidaForm(request.POST or None, request.FILES or None, instance = comida)
 
         if formulario.is_valid():
             formulario.save() #modificar a la BD

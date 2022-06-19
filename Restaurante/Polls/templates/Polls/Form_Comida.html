@@ -50,10 +50,10 @@
     <div class="container1"></div>
     <div class="container">
     <div class="row">
-        <form action="" method="POST" id="formulario">
+        <form action="" method="POST" id="formulario" enctype= "multipart/form-data">
             {% csrf_token %}
             <div class="form-group">
-                {{form.as_table}}
+                {{form.as_p}}
             </div>
             <br>
             <br>

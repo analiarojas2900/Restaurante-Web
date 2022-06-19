@@ -54,6 +54,7 @@
                 <th>ID</th>
                 <th>Precio</th>
                 <th>Nombre</th>
+                <th>Imagen</th>
                 <th>Caracteristicas</th>
                 <th>Modificar</th>
                 <th>Eliminar</th>
@@ -65,6 +66,7 @@
                 <td>{{c.idPlato}}</td>
                 <td>{{c.precio}}</td>
                 <td>{{c.nombre}}</td>
+                <td><img src="/{{c.img}}" alt="Foto" width="250"></td>
                 <td>{{c.caracteristica}}</td>
                 <td><a href="{% url 'Modificar_Comida' c.idPlato %}"><img src="{% static 'polls/img/icons8-modify-24.png' %}" alt=""></a></td>
                 <td><a href="{% url 'Eliminar_Comida' c.idPlato %}"><img src="{% static 'polls/img/icons8-eliminar-24.png' %}" alt=""></a></td>
