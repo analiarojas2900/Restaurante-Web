@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <link type="text/css" rel="stylesheet" href="{% static 'polls/css/style.css' %}">
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
-    <title>Reserva</title>
+    <title>Iniciar Sesión</title>
 </head>
 <body>
     <a href="https://api.whatsapp.com/send?phone=+56972525843" class="btn-wsp" target="_blank">
@@ -55,38 +55,29 @@
         <section>
             <main>
                 <div class="container">
-                <form action="" class="formulario" id="formulario">
-                    <div class="formulario__grupo" id="grupo__correo">
-                        <label for="correo" class="formulario__label">Correo Electrónico</label>
-                        <div class="formulario__grupo-input">
-                            <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
-                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                        </div>
-                        <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
-                    </div>
-                    <div class="formulario__grupo" id="grupo__password">
-                        <label for="password" class="formulario__label">Contraseña</label>
-                        <div class="formulario__grupo-input">
-                            <input type="password" class="formulario__input" name="password" id="password">
-                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                        </div>
-                        <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
-                    </div>
-                    <div class="formulario__mensaje" id="formulario__mensaje">
-                        <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
-                    </div>
-                    <div class="formulario__grupo formulario__grupo-btn-enviar">
-                        <button type="submit" class="formulario__btn">Iniciar Seccion</button>
+                  <div class="input-group mb-3">
+                    <input type="text" name="username" class="form-control input_user" value="" placeholder="Nombre de Usuario">
+                  </div>
+                  <div class="input-group mb-2">
+                    <input type="password" name="password" class="form-control input_pass" value="" placeholder="Contraseña">
+                  </div>
+                  
+                  <div class="d-flex justify-content-center mt-3 login_container">
+                        <button type="submit" class="formulario__btn">Iniciar Sesión</button>
                         <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Inicio de seccion exitosamente!</p>
                         <button class="formulario__btn">Registrarse</button><a href="{% url 'Registrar' %}"></a>
                     </div>
                 </form>
-                {% if user.is_authenticated %}
-                  <p>Welcome, You are logged in as {{ user.username }}</p>
-                    {% else %}
-                    <button class="google"><a href="{% provider_login_url 'google' %}">Iniciar seccion con<img src="{% static 'polls/img/icons8-logo-de-google-48.png' %}" alt=""></a></button>
-                    {% endif %}
-                </div>
+                    <div class="g-sign-in-button">
+                      <div class=content-wrapper>
+                          <div class="logo-wrapper">
+                              <img src="{% static 'Polls/img/icons8-logo-de-google-48.png' %}">
+                          </div>
+                          <span class='text-container'>
+                          <span><a href="{% provider_login_url 'google' %}">Iniciar Sesión</a></span>
+                      </span>
+                      </div>
+                  </div>
             </main>	
             <script src="js/formulario.js"></script>
             <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>

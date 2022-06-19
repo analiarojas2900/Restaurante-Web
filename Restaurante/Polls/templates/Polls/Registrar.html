@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <link type="text/css" rel="stylesheet" href="{% static 'polls/css/style.css' %}">
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
-    <title>Reserva</title>
+    <title>Registrarse</title>
 </head>
 <body>
     <a href="https://api.whatsapp.com/send?phone=+56972525843" class="btn-wsp" target="_blank">
@@ -123,11 +123,16 @@
                   </form>
                   <br>
                   <a href="{% url 'InicioSeccion' %}"><button class="formulario__btn">Iniciar Seccion</button></a>
-                  {% if user.is_authenticated %}
-                  <p>Welcome, You are logged in as {{ user.username }}</p>
-                    {% else %}
-                  <button class="google"><a href="{% provider_login_url 'google' %}">Iniciar seccion con<img src="{% static 'polls/img/icons8-logo-de-google-48.png' %}" alt=""></a></button>
-                    {% endif %}
+                  <div class="g-sign-in-button">
+                    <div class=content-wrapper>
+                        <div class="logo-wrapper">
+                            <img src="{% static 'Polls/img/icons8-logo-de-google-48.png' %}">
+                        </div>
+                        <span class='text-container'>
+                        <span><a href="{% provider_login_url 'google' %}">Sign in with Google</a></span>
+                    </span>
+                    </div>
+                </div>
                 </div>    
                 </main>	
             <script src="js/formulario.js"></script>
