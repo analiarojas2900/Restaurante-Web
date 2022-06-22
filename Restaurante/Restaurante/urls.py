@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_comida.api import UserAPI
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('API/', include('rest_comida.urls')),
     path('', include('Polls.urls')),
-   
+    path('api/1.0/create_user/', UserAPI.as_view(), name = "api_create_user"),
 ]

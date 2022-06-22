@@ -8,3 +8,6 @@ class UserAPI(APIView):
         serializers = UserSerializer( data = request.data)
         if serializers.is_valid():
             user = serializers.save()
+            return Response(serializers.data, status = status.HTTP_201_CREATED)
+        else: 
+            return Response(serializers.errors, status = status.HTTP_400_BAD_REQUEST)
