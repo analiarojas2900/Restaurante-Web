@@ -9,7 +9,7 @@ class Categoria(models.Model):
         return self.nombreCategoria
 
 class Comida(models.Model):
-    idPlato = models.AutoField(max_length=6, primary_key=True, verbose_name='Id Plato')
+    idPlato = models.AutoField( primary_key=True, verbose_name='Id Plato')
     precio = models.CharField(max_length=10, verbose_name='Precio')
     nombre = models.CharField(max_length=20, verbose_name='Nombre')
     img=models.ImageField(upload_to = 'Polls/static/Polls/img/',null=True,verbose_name='Imagen')
