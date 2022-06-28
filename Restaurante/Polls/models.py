@@ -1,4 +1,6 @@
 from django.db import models
+from pyexpat import model
+from tabnanny import verbose
 
 # Create your models here.
 class Categoria(models.Model):
@@ -18,3 +20,9 @@ class Comida(models.Model):
 
     def __str__(self):
         return self.idPlato
+
+
+class Usuario(models.Model):
+    usuarioN= models.CharField(max_length=30,verbose_name="Nombre de Usuario")
+    passwordN= models.CharField(max_length=15, verbose_name="Contraseña")
+    password2N=models.CharField(max_length=15, verbose_name=" Contraseña2")

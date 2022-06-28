@@ -48,3 +48,5 @@ def detalle_comida(request, id):
     elif request.method == "DELETE":
         comida.delete()
         return Response(status = status.HTTP_204_NO_CONTENT)
+
+

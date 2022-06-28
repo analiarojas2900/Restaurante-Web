@@ -84,7 +84,7 @@ ROOT_URLCONF = 'Restaurante.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'Polls/templates/Polls'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -97,10 +97,16 @@ TEMPLATES = [
     },
 ]
 
-REST_FRAMEWORK={
+REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES':[
+        #'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.TokenAuthentication',
     ],
+    'DEFAULT_PARSER_CLASSES': (
+    'rest_framework.parsers.JSONParser',
+    'rest_framework.parsers.FormParser',
+    'rest_framework.parsers.MultiPartParser',
+),
 }
 
 

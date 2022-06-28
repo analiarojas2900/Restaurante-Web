@@ -6,12 +6,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link type="text/css" rel="stylesheet" href="{% static 'polls/css/style.css' %}">
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
-    <title>Iniciar Sesión</title>
+    <title>Registrarse</title>
 </head>
 <body>
     <a href="https://api.whatsapp.com/send?phone=+56972525843" class="btn-wsp" target="_blank">
@@ -52,38 +51,22 @@
           </div>
         </nav>
       </header>
-        <section>
-            <main>
-                <div class="container">
-                  <div class="input-group mb-3">
-                    <input type="text" name="username" class="form-control input_user" value="" placeholder="Nombre de Usuario">
-                  </div>
-                  <div class="input-group mb-2">
-                    <input type="password" name="password" class="form-control input_pass" value="" placeholder="Contraseña">
-                  </div>
-                  
-                  <div class="d-flex justify-content-center mt-3 login_container">
-                        <button type="submit" class="formulario__btn">Iniciar Sesión</button>
-                        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Inicio de seccion exitosamente!</p>
-                        <button class="formulario__btn">Registrarse</button><a href="{% url 'Registrar' %}"></a>
-                    </div>
+      <section>
+        <main>
+            <div class="container">
+                <form class="login-form" onSubmit="return false;">
+                    </p>
+                    <input type="email" class="login-username" autofocus="true" placeholder="Email" id="recupEmail" />
+                    <input type="submit" name="Login" value="Recuperar" class="login-submit" id="recuperar" />
+                    <p class="login-text" id="mensajeErrorMail">Usuario invalido</p>
                 </form>
-                    <div class="g-sign-in-button">
-                      <div class=content-wrapper>
-                          <div class="logo-wrapper">
-                              <img src="{% static 'Polls/img/icons8-logo-de-google-48.png' %}">
-                          </div>
-                          <span class='text-container'>
-                          <span><a href="{% provider_login_url 'google' %}">Iniciar Sesión</a></span>
-                      </span>
-                      </div>
-                  </div>
-            </main>	
-            <script src="js/formulario.js"></script>
-            <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-        </section>
-        
-    <section>
+                <a href="{% url 'login'%}" class="login-new-user"> Ya tienes usuario? Log-in</a>
+            </div>
+        </main>
+      </section>
+
+
+      <section>
         <br>
         <footer>
           <nav id="RedesSociales">
@@ -97,9 +80,8 @@
           </nav>
       </footer>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>     
-    <script src="https://www.gstatic.com/firebasejs/9.8.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.8.2/firebase-firestore-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.8.2/firebase-auth-compat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{%static 'Polls/js/scripts.js'%}"></script> 
 </body>
 </html>
