@@ -57,7 +57,7 @@
                   <form class="login-form" id="creaUsuario" method="POST">
                     {%csrf_token%}
                     {{form.as_p}}
-                    <button type="submit" name="create" value="Crear Usuario" class="formulario__btn id="crearUsuario" />Iniciar Sesión</button>
+                    <button type="submit" name="create" value="Crear Usuario" class="formulario__btn" id="crearusuarioN" />Iniciar Sesión</button>
                     <p class="login-text" id="mensajeError1">Usuario invalido</p>
                     <p class="login-text" id="mensajeErrorPass"> Las contraseñas no coinciden</p>
                 </form>
@@ -94,5 +94,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script type="text/javascript" src="{%static 'Polls/js/scripts.js'%}"></script> 
-</body>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+  </body>
 </html>

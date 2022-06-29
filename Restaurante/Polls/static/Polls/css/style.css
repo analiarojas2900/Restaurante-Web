@@ -357,6 +357,16 @@ input[type="button"], input[type="reset"], input[type="submit"] {
 	height: 50px;
 }
 
+.login-username,
+.login-password:hover{
+box-shadow: 3px 0px 30px #000000;
+}
+
+input[type="text"],
+textarea:hover{
+    box-shadow: 3px 0px 30px #000000;
+}
+
 
 textarea {
 	display: block;

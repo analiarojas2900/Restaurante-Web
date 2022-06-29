@@ -2,6 +2,7 @@ from telnetlib import LOGOUT
 from tokenize import group
 from turtle import delay
 from django import forms
+from unicodedata import name
 from django.shortcuts import render,redirect
 from Polls.models import Comida, Usuario
 from Polls.forms import ComidaForm, UsuarioForm, LoginForm
@@ -18,12 +19,11 @@ from rest_comida.viewsLogin import login as api_login
 import json
 import requests
 from rest_framework.authtoken.models import Token
-from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response as apiResponse
 from rest_framework.views import APIView
 
 def is_staff(user):
-    return user.is_authenticated and user.Cliente
+    return user.is_authenticate and user.Cliente
 
 def index(request):
     return render(request,'Polls/index.html')
@@ -57,7 +57,7 @@ def Platos(request):
         'comida':listaComida
     }
     return render(request,"Polls/Platos.html", datos)
-
+@user_passes_test(is_staff)
 def Form_Comida(request):
     datos = {
         'form': ComidaForm()
@@ -114,9 +114,9 @@ def user_login(request):
             user = authenticate(username=usernameU,password=passwordU)
             if user is not None:
                 login(request,user)
-                return render(request, "Polls/Recuperar.html")
+                return render(request, "Polls/index.html")
     return render(request,"Polls/login.html",datos)
-#recuperar contraseña
+
 def Recuperar(request):
     return render(request,"Polls/Recuperar.html")
 
@@ -128,27 +128,23 @@ def Registrar(request):
     if(request.method == 'POST'):
         form=UsuarioForm(request.POST)
         if form.is_valid():
-            #obtiene los datos del usuario desde formulario
             usernameN = form.cleaned_data.get('usuarioN')
-            passwordN = form.cleaned_data.get('passwordN')
+            passwordNN = form.cleaned_data.get('passwordN')
             passwordN2= form.cleaned_data.get('password2N')
             try:
-                #se verifica existencia del usuario
                 user = User.objects.get(username = usernameN)
             except User.DoesNotExist:
-                #si no existe se genera un nuevo usuario validando si es que las pswrd son identicas
-                if(passwordN == passwordN2):
-                    user = User.objects.create_user(username=usernameN,email=usernameN,password=passwordN)
-                    user = authenticate(username=usernameN, password=passwordN) #autentifican las credenciales del usuario
-                    #se asigna un grupo al usuario nuevo (default comprador)
-                    my_group = Group.objects.get(name='Comprador')
-                    user.groups.add(my_group)
-                    #se logea al usuario nuevo
+                if(passwordNN == passwordN2):
+                    user = User.objects.create_user(username=usernameN,email=usernameN,password=passwordNN)
+                    user = authenticate(username=usernameN, password=passwordNN) 
                     login(request,user)
-                    #comienzo de creacion de token
-                    body= {"username": usernameN ,"password" : passwordN} #se genera json con info de usuario creado
-                    r = requests.post('http://http://127.0.0.1:8000/api/login',data=json.dumps(body)) # se realiza la creacion de token
-                    print(r.text) #se imprime token en forma  de debug
-                    #fin creacion token
+                    body= {"username": usernameN ,"password" : passwordNN}
+                    r = requests.post('http://127.0.0.1:8000//API/login',data=json.dumps(body))
+                    print(r.text) 
                     return render(request, "Polls/index.html")
     return render(request,"Polls/Registrar.html",datos)
+
+
+def cerrarsesion(request):
+    logout(request)
+    return redirect(user_login)

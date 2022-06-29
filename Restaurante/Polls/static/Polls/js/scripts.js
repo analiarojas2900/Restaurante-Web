@@ -1,5 +1,4 @@
 
-const formulario = document.getElementById('formulario');
 
 $("#mensajeError1").hide();
 
@@ -32,7 +31,7 @@ $("#loginBTN").click(function() {
 
 
 
-$("#crearUsuarioN").click(function() {
+$("#crearusuarioN").click(function() {
     var correo = $("#newcorreo").val();
 
     if (IsEmail(correo) && correo != "") {
@@ -62,21 +61,3 @@ $("#recuperar").click(function() {
     }
 })
 
-formulario.addEventListener('submit', (e) => {
-    e.preventDefault();
-    var email = document.getElementById("EntradaMail").value;
-    var mensaje = document.getElementById("infoBox").value;
-
-    if (IsEmail(email)) {
-        console.log("Se aprueba correo")
-        if (mensaje != null) {
-            console.log("Se aprueba mensaje")
-            sendEmail(email, mensaje);
-            console.log("Mensaje enviado")
-            return true;
-        }
-    } else {
-        alert("Correo Incorrecto")
-        return false;
-    }
-});
