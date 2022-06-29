@@ -139,7 +139,7 @@ def Registrar(request):
                     user = authenticate(username=usernameN, password=passwordNN) 
                     login(request,user)
                     body= {"username": usernameN ,"password" : passwordNN}
-                    r = requests.post('http://127.0.0.1:8000//API/login',data=json.dumps(body))
+                    r = requests.post('http://127.0.0.1:8000/API/login',data=json.dumps(body))
                     print(r.text) 
                     return render(request, "Polls/index.html")
     return render(request,"Polls/Registrar.html",datos)
