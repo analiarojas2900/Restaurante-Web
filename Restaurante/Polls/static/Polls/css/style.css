@@ -239,7 +239,7 @@ transform: perspective(600px) rotateY(360deg);
 }
 
 .g-sign-in-button {
-	margin: 10px;
+	margin: 30px;
 	display: inline-block;
 	width: 240px;
 	height: 50px;
@@ -744,7 +744,7 @@ input:focus :-ms-input-placeholder {
     color: white;
     cursor: pointer;
     display: block;
-    font-size: 75%;
+    font-size: 15px;
     left: 0;
     opacity: 0.6;
     padding: 0.5rem;
@@ -757,7 +757,7 @@ input:focus :-ms-input-placeholder {
     color: white;
     cursor: pointer;
     display: block;
-    font-size: 75%;
+    font-size: 15px;
     left: 0;
     opacity: 0.6;
     padding: 0.5rem;
