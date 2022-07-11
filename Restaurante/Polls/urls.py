@@ -19,7 +19,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', user_login, name='index'),
+    path('', index, name='index'),
     path('Contacto', Contacto, name='Contacto'),
     path('MenuNormal', MenuNormal, name='MenuNormal'),
     path('MenuVegetariano', MenuVegetariano, name='MenuVegetariano'),
@@ -34,6 +34,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', TemplateView.as_view(template_name="login")),
     path('logout', LogoutView.as_view()),
+    path('desconectar/', views.desconectar, name= 'desconectar'),
 ]
 
 if settings.DEBUG:

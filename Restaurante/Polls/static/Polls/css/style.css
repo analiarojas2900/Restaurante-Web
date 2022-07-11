@@ -68,6 +68,19 @@ a{
 	margin-right: 10px;
 }
 
+.salir{
+	margin-top: 10px;
+	height: 60px;
+	margin-right: 10px;
+}
+
+.username_container{
+	font-size: 5rem;
+	margin-top: 10px;
+    height: 60px;
+    margin-right: 40px;
+}
+
 button{
 	margin: 6px;
 	height: 70%;

@@ -57,7 +57,7 @@
                 <div class="container">
                   <form class="login-form" method="POST">
                     {%csrf_token%}
-                    {{form.usuarioN}} {{form.passwordN}}
+                    {{form.usrN}} {{form.pswrdN}}
                     <input type="submit" name="loginBTN" value="Login" class="login-submit" id="loginBTN" />
                     <p class="login-text" id="mensajeError">Usuario o contraseña incorrectos</p>
                     <div class="g-sign-in-button">
