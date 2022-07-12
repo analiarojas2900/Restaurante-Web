@@ -19,7 +19,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', index, name='index'),
+    path('', user_login, name='index'),
     path('Contacto', Contacto, name='Contacto'),
     path('MenuNormal', MenuNormal, name='MenuNormal'),
     path('MenuVegetariano', MenuVegetariano, name='MenuVegetariano'),
