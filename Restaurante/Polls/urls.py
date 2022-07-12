@@ -17,6 +17,7 @@ from django.views.generic import TemplateView
 from django.contrib.auth.views import LogoutView
 from django.conf import settings
 from django.conf.urls.static import static
+from CarritoApp.views import tienda, agregar_producto, eliminar_producto, restar_producto, limpiar_carrito, pago
 
 urlpatterns = [
     path('', user_login, name='index'),
@@ -35,6 +36,12 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name="login")),
     path('logout', LogoutView.as_view()),
     path('desconectar/', views.desconectar, name= 'desconectar'),
+    path('tienda/', tienda, name="tienda"),
+    path('agregar/<int:producto_id>/', agregar_producto, name="Add"),
+    path('eliminar/<int:producto_id>/', eliminar_producto, name="Del"),
+    path('restar/<int:producto_id>/', restar_producto, name="Sub"),
+    path('limpiar/', limpiar_carrito, name="CLS"),
+    path('pago/', pago, name="pago"),
 ]
 
 if settings.DEBUG:
