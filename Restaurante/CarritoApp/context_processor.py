@@ -5,3 +5,11 @@ def total_carrito (request):
             for key, value in request.session["carrito"].items():
                 total += int(value["acumulado"])
     return {"total_carrito": total}
+
+def descuento_carrito(request):
+    descuento = total * 0.15
+    if request.user.is_authenticated:
+        if "carrito" in request.session.keys():
+            for key, value in request.session["carrito"].items():
+                total = int(value["acumulado"])
+    return {"descuento": descuento}
