@@ -154,14 +154,14 @@ body .card{
 display: flex;
 align-items: center;
 flex-wrap: wrap;
+float: right;
 }
 
 
 .card{
-position: relative;
-width: 280px;
-height: 500px;
-margin: 20px 40px;
+width: 295px;
+height: 450px;
+margin: 10px 10px;
 float: left;
 text-align: center;
 background-color: #D2F1EB;
@@ -827,3 +827,21 @@ input:focus :-ms-input-placeholder {
     padding: 2vh;
     justify-content: center;
 }
+
+.container5{
+	float: right;
+	width: 600px;
+	margin-right:10px;
+	align-items: flex-end;
+	padding: 20px 30px;
+}
+
+.container7{
+	float: left;
+}
+
+
+.row{
+	padding: 10px 0;
+}
+

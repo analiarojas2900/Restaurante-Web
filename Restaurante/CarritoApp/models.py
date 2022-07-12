@@ -4,6 +4,7 @@ from django.db import models
 class Producto(models.Model):
     nombre = models.CharField(max_length=64)
     img=models.ImageField(upload_to = 'Polls/static/Polls/img/',null=True,verbose_name='Imagen')
+    caracteristica = models.TextField(max_length=200,null=True, blank=True, verbose_name='Caracteristica')
     categoria = models.CharField(max_length=32)
     precio = models.IntegerField()
 
